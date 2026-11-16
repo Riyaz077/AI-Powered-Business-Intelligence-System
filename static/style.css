@@ -1,2 +1,33 @@
 :root{--bg:#08111f;--panel:#101d30;--panel2:#14243a;--line:#233650;--text:#edf4ff;--muted:#8fa3bd;--cyan:#50d6e8;--blue:#6b8cff}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#132d4b 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}.topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(calc((100% - 1180px)/2),24px);background:#08111fdd}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111e;font-weight:900}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.status{font-size:10px;letter-spacing:1px;color:#74e6bd}.container{max-width:1180px;margin:auto;padding:38px 24px}.hero{display:flex;justify-content:space-between;align-items:center;padding:34px 0 42px}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:800;margin:0 0 12px}.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-2px;margin:0}.hero h1 span{color:var(--cyan)}.hero-copy{max-width:600px;color:var(--muted);line-height:1.7}.hero-icon{font-size:110px;color:#5ed9e6;text-shadow:0 0 50px #40cfe955;padding-right:50px}.panel,.kpi{background:linear-gradient(145deg,var(--panel),#0d192a);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 12px 32px #0002}.upload-panel{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}.upload-panel h2,.panel h2,.section-heading h2{margin:0 0 8px;font-size:20px}.muted,.note{color:var(--muted);font-size:13px;line-height:1.6}.upload-panel form{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.upload-panel input{max-width:220px;color:var(--muted);font-size:12px}button{border:0;border-radius:9px;padding:12px 17px;background:linear-gradient(100deg,var(--cyan),#7e9bff);color:#071322;font-weight:800;cursor:pointer}.download{grid-column:2;color:var(--cyan);font-size:12px;text-decoration:none}.section-heading{display:flex;justify-content:space-between;align-items:end;margin:34px 0 16px}.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.kpi span,.kpi small{display:block;color:var(--muted);font-size:12px}.kpi strong{display:block;font-size:30px;margin:12px 0 6px}.content-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin:16px 0}.chart-panel canvas{max-height:250px;margin-top:20px}.metric-line{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}.metric-line strong{color:var(--text)}.small-strong{font-size:12px}.note{font-size:11px;margin-top:16px}.forecast{display:flex;gap:7px;flex-wrap:wrap}.forecast span{background:var(--panel2);padding:9px;border-radius:7px;font-size:11px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px;margin-top:15px}th,td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}.recommendations{margin-top:16px}.recommendation{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--line);padding:8px 0}.recommendation span{color:#72e5bb}.recommendation p{margin:0;color:#c9d7e9;font-size:13px;line-height:1.5}footer{text-align:center;color:#61758f;font-size:11px;padding:35px 0 10px}.alert{background:#4a2630;border:1px solid #9e4b5d;padding:12px;border-radius:8px;margin:12px 0;font-size:13px}@media(max-width:800px){.upload-panel,.content-grid{grid-template-columns:1fr}.download{grid-column:1}.kpi-grid{grid-template-columns:repeat(2,1fr)}.hero-icon{display:none}.section-heading{align-items:start;gap:8px;flex-direction:column}}@media(max-width:480px){.container{padding:24px 14px}.kpi-grid{grid-template-columns:1fr 1fr}.upload-panel form{align-items:flex-start;flex-direction:column}.topbar{padding:0 14px}.status{font-size:8px}}
+.site-footer {
+    text-align: center;
+    padding: 45px 20px 25px;
+    margin-top: 40px;
+    border-top: 1px solid #233650;
+}
+
+.site-footer h3 {
+    color: #50d6e8;
+    font-size: 17px;
+}
+
+.site-footer h2 {
+    color: #edf4ff;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.site-footer p {
+    color: #8fa3bd;
+    font-size: 13px;
+    margin: 6px;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #233650;
+    color: #71849e;
+    font-size: 11px;
+}
