@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Business Intelligence</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">AI</span><div><strong>Business Intelligence</strong><small>Predictive Analytics Platform</small></div></div>
+  <span class="status">● SYSTEM READY</span>
+</header>
+<main class="container">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">DATA → INTELLIGENCE → DECISIONS</p>
+      <h1>Turn business data into<br><span>better decisions.</span></h1>
+      <p class="hero-copy">Explore performance, identify unusual patterns and generate machine-learning insights from your business dataset.</p>
+    </div>
+    <div class="hero-icon">◈</div>
+  </section>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}{% for category, message in messages %}<div class="alert">{{ message }}</div>{% endfor %}{% endif %}
+  {% endwith %}
+
+  <section class="panel upload-panel">
+    <div><p class="eyebrow">DATA INPUT</p><h2>Analyze your dataset</h2><p class="muted">Upload a CSV file with business records. A demo dataset is loaded by default.</p></div>
+    <form action="{{ url_for('analyze') }}" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".csv" required>
+      <button type="submit">Upload & Analyze</button>
+    </form>
+    <a class="download" href="{{ url_for('download_demo') }}">Download sample CSV</a>
+  </section>
+
+  <div class="section-heading"><div><p class="eyebrow">OVERVIEW</p><h2>Dataset: {{ filename }}</h2></div><span class="muted">{{ rows }} records analyzed</span></div>
+  <section class="kpi-grid">
+    <article class="kpi"><span>Total Records</span><strong>{{ result.total_rows }}</strong><small>Rows in dataset</small></article>
+    <article class="kpi"><span>Data Attributes</span><strong>{{ result.total_columns }}</strong><small>Columns detected</small></article>
+    <article class="kpi"><span>Missing Values</span><strong>{{ result.missing_total }}</strong><small>Data quality check</small></article>
+    <article class="kpi"><span>Duplicate Rows</span><strong>{{ result.duplicate_rows }}</strong><small>Potential duplicates</small></article>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel chart-panel"><p class="eyebrow">DESCRIPTIVE ANALYTICS</p><h2>{{ result.target }} — first 30 records</h2><canvas id="trendChart"></canvas></article>
+    <article class="panel"><p class="eyebrow">KEY METRICS</p><h2>Business snapshot</h2>
+      <div class="metric-line"><span>Total {{ result.target }}</span><strong>{{ "{:,.2f}".format(result.total_value) }}</strong></div>
+      <div class="metric-line"><span>Average {{ result.target }}</span><strong>{{ "{:,.2f}".format(result.average_value) }}</strong></div>
+      <div class="metric-line"><span>Model target</span><strong class="small-strong">{{ result.target }}</strong></div>
+      <p class="note">Metrics are calculated from the uploaded dataset. Confirm column meaning and units before making business decisions.</p>
+    </article>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel"><p class="eyebrow">PREDICTIVE ANALYTICS</p><h2>Model evaluation</h2>
+      {% if result.metrics %}
+        <div class="metric-line"><span>MAE</span><strong>{{ result.metrics.mae }}</strong></div>
+        <div class="metric-line"><span>RMSE</span><strong>{{ result.metrics.rmse }}</strong></div>
+        <div class="metric-line"><span>R²</span><strong>{{ result.metrics.r2 if result.metrics.r2 is not none else "N/A" }}</strong></div>
+        <p class="note">Random Forest regression with an ordered 80/20 holdout split. This is a baseline model, not a production forecast.</p>
+      {% else %}<p class="muted">Add at least 30 rows and a numeric column to enable baseline model evaluation.</p>{% endif %}
+      {% if result.forecast %}<h3>Illustrative next 7 predictions</h3><div class="forecast">{% for value in result.forecast %}<span>{{ value }}</span>{% endfor %}</div>{% endif %}
+    </article>
+    <article class="panel"><p class="eyebrow">ANOMALY DETECTION</p><h2>Unusual records</h2>
+      {% if result.anomalies %}
+        <p class="muted">Potential anomalies identified by Isolation Forest (first 10 shown).</p>
+        <div class="table-wrap"><table><thead><tr><th>CSV row</th><th>{{ result.target }}</th></tr></thead><tbody>{% for item in result.anomalies %}<tr><td>{{ item.row }}</td><td>{{ item.value }}</td></tr>{% endfor %}</tbody></table></div>
+      {% else %}<p class="muted">No anomaly results available. At least 20 records with numeric data are required.</p>{% endif %}
+    </article>
+  </section>
+
+  <section class="panel"><p class="eyebrow">DATA QUALITY</p><h2>Column profile</h2>
+    <div class="table-wrap"><table><thead><tr><th>Column</th><th>Data type</th><th>Missing</th><th>Unique values</th></tr></thead><tbody>
+      {% for item in result.summary_rows %}<tr><td>{{ item.column }}</td><td>{{ item.type }}</td><td>{{ item.missing }}</td><td>{{ item.unique }}</td></tr>{% endfor %}
+    </tbody></table></div>
+  </section>
+
+  <section class="panel recommendations"><p class="eyebrow">DECISION INTELLIGENCE</p><h2>Recommended actions</h2>
+    {% for item in result.recommendations %}<div class="recommendation"><span>✓</span><p>{{ item }}</p></div>{% endfor %}
+  </section>
+  <footer>AI-Powered Business Intelligence and Predictive Analytics System · Academic portfolio project</footer>
+</main>
+<script>
+const labels = {{ result.chart_labels|tojson }};
+const values = {{ result.chart_values|tojson }};
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: { labels, datasets: [{ label: '{{ result.target|e }}', data: values, borderWidth: 2, tension: .3, fill: true }] },
+  options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false } } }
+});
+</script>
+</body>
+</html>
