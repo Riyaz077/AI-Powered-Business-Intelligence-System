@@ -94,6 +94,25 @@ The application can be deployed using a Python-compatible cloud hosting platform
 A publicly accessible deployment URL will be added here after successful deployment.
 Live Demo: Add your deployed application URL.
 
+## Dashboard Screenshots 
+
+1. Dashboard Overview
+   <img width="1509" height="630" alt="dashboard-overview" src="https://github.com/user-attachments/assets/12cb80df-b156-4092-8f4f-49d9dd880b28" />
+2. Business Analytics KPI Overview
+   <img width="1174" height="246" alt="business-analytics-kpi-overview" src="https://github.com/user-attachments/assets/2804da56-bcbc-4ab0-9bbc-7ae9344b327a" />
+3. Descriptive Sales Analytics
+   <img width="634" height="393" alt="descriptive-sales-analytics" src="https://github.com/user-attachments/assets/e1269373-ff7a-4832-9a49-a75ccdcfba1d" />
+4. Business Performance Snapshot
+   <img width="536" height="398" alt="business-performance-snapshot" src="https://github.com/user-attachments/assets/11a85fcb-4da3-4c7d-b00e-70155d8121b7" />
+5. Random Forest Predictive Analytics
+   <img width="638" height="626" alt="random-forest-predictive-analytics" src="https://github.com/user-attachments/assets/96d1c95b-55b9-487f-81d7-1417bb906a33" />
+6. Isolation Forest Anomaly Detection
+   <img width="522" height="622" alt="isolation-forest-anomaly-detection" src="https://github.com/user-attachments/assets/349e8866-2a57-4965-8bf9-f51998024d25" />
+7. Business Data Quality Profile
+   <img width="1162" height="468" alt="business-data-quality-profile" src="https://github.com/user-attachments/assets/de2e5d47-95a6-42c9-b410-b26ce6408eb7" />
+8. Decision Intelligence Recommendations
+   <img width="1164" height="454" alt="decision-intelligence-recommendations" src="https://github.com/user-attachments/assets/48dbc407-762c-4b24-9667-33415c1be497" />
+
 ## License
 This project is available for educational and portfolio demonstration purposes. A formal open-source license can be added separately if the repository owner chooses to distribute the project under specific licensing terms.
 
