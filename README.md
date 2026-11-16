@@ -103,11 +103,17 @@ Live Demo: Add your deployed application URL.
 3. Descriptive Sales Analytics
    <img width="634" height="393" alt="descriptive-sales-analytics" src="https://github.com/user-attachments/assets/e1269373-ff7a-4832-9a49-a75ccdcfba1d" />
 4. Business Performance Snapshot
-   <img width="536" height="398" alt="business-performance-snapshot" src="https://github.com/user-attachments/assets/11a85fcb-4da3-4c7d-b00e-70155d8121b7" />
-   
+   <p align="center">
+  <img src="https://github.com/user-attachments/assets/11a85fcb-4da3-4c7d-b00e-70155d8121b7"
+       alt="Business Performance Snapshot"
+       width="520">
+   </p>   
 5. Random Forest Predictive Analytics
-   <img width="638" height="626" alt="random-forest-predictive-analytics" src="https://github.com/user-attachments/assets/96d1c95b-55b9-487f-81d7-1417bb906a33" />
-   
+   <p align="center">
+  <img src="https://github.com/user-attachments/assets/96d1c95b-55b9-487f-81d7-1417bb906a33"
+       alt="Random Forest Predictive Analytics"
+       width="520">
+</p>
 6. Isolation Forest Anomaly Detection
    <img width="522" height="622" alt="isolation-forest-anomaly-detection" src="https://github.com/user-attachments/assets/349e8866-2a57-4965-8bf9-f51998024d25" />
 7. Business Data Quality Profile
