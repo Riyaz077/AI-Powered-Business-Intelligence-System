@@ -115,9 +115,21 @@ Live Demo: Add your deployed application URL.
        width="520">
 </p>
 6. Isolation Forest Anomaly Detection
-   <img width="522" height="622" alt="isolation-forest-anomaly-detection" src="https://github.com/user-attachments/assets/349e8866-2a57-4965-8bf9-f51998024d25" />
+   <p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/349e8866-2a57-4965-8bf9-f51998024d25"
+    alt="Isolation Forest Anomaly Detection"
+    width="520"
+  />
+</p>
 7. Business Data Quality Profile
-   <img width="1162" height="468" alt="business-data-quality-profile" src="https://github.com/user-attachments/assets/de2e5d47-95a6-42c9-b410-b26ce6408eb7" />
+   <p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/de2e5d47-95a6-42c9-b410-b26ce6408eb7"
+    alt="Business Data Quality Profile"
+    width="700"
+  />
+</p>
 8. Decision Intelligence Recommendations
    <img width="1164" height="454" alt="decision-intelligence-recommendations" src="https://github.com/user-attachments/assets/48dbc407-762c-4b24-9667-33415c1be497" />
 
