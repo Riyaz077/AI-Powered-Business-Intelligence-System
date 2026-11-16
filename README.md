@@ -31,17 +31,7 @@ A Flask-based academic portfolio project that demonstrates how business data can
    `python app.py`
 9. Open `http://127.0.0.1:5000` in your browser.
 
-## macOS / Linux setup
-1. Open Terminal in the extracted project folder.
-2. Create a virtual environment:
-   `python3 -m venv .venv`
-3. Activate it:
-   `source .venv/bin/activate`
-4. Install dependencies:
-   `python -m pip install -r requirements.txt`
-5. Start the application:
-   `python app.py`
-6. Open `http://127.0.0.1:5000` in your browser.
+
 
 ## Use your own data
 Upload a CSV file from the dashboard. The app automatically identifies numeric columns and selects a target using common names such as `sales`, `revenue`, `profit`, `quantity`, `units`, `amount` or `orders`. If none match, it uses the first numeric column.
