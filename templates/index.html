@@ -80,7 +80,21 @@
   <section class="panel recommendations"><p class="eyebrow">DECISION INTELLIGENCE</p><h2>Recommended actions</h2>
     {% for item in result.recommendations %}<div class="recommendation"><span>✓</span><p>{{ item }}</p></div>{% endfor %}
   </section>
-  <footer>AI-Powered Business Intelligence and Predictive Analytics System · Academic portfolio project</footer>
+  <footer class="site-footer">
+    <h3>AI-Powered Business Intelligence
+        and Predictive Analytics System</h3>
+
+    <p>Designed & Developed by</p>
+
+    <h2>Mohamed Riyaz S.</h2>
+
+    <p>Integrated M.Tech CSE | Business Analytics</p>
+    <p>VIT Chennai</p>
+
+    <div class="footer-bottom">
+        © 2026 Mohamed Riyaz S. | All Rights Reserved
+    </div>
+</footer>
 </main>
 <script>
 const labels = {{ result.chart_labels|tojson }};
