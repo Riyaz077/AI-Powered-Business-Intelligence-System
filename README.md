@@ -101,4 +101,6 @@ This project is available for educational and portfolio demonstration purposes. 
 
 **Mohamed Riyaz S.**  
 Integrated M.Tech, Computer Science and Engineering (Business Analytics)  
-VIT Chennai
+Vellore Institute of Technology (VIT), Chennai
+
+Designed, developed, and implemented this project as part of my technical portfolio, combining web application development, artificial intelligence, machine learning, and business analytics.
