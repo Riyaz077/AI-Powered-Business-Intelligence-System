@@ -186,65 +186,7 @@ These recommendations are generated through predefined logic rather than a train
 
 ---
 
-## Dashboard Screenshots
 
-The following screenshots demonstrate the application interface and its analytical capabilities, from the initial dashboard experience to advanced analytical outputs and decision-support recommendations.
-
-### 01. Dashboard Overview
-
-The main Streamlit application interface, introducing the business intelligence platform and its analytical capabilities.
-
-![Dashboard Overview](https://github.com/user-attachments/assets/12cb80df-b156-4092-8f4f-49d9dd880b28)
-
-### 02. Business Analytics KPI Overview
-
-A consolidated view of important business performance indicators and key analytical metrics.
-
-![Business Analytics KPI Overview](https://github.com/user-attachments/assets/2804da56-bcbc-4ab0-9bbc-7ae9344b327a)
-
-### 03. Business Data Quality Profile
-
-An overview of dataset structure, missing values, duplicate records, and data-quality characteristics.
-
-![Business Data Quality Profile](https://github.com/user-attachments/assets/de2e5d47-95a6-42c9-b410-b26ce6408eb7)
-
-### 04. Descriptive Sales Analytics
-
-Visual exploration of business metrics and sales patterns through descriptive analytics.
-
-![Descriptive Sales Analytics](https://github.com/user-attachments/assets/e1269373-ff7a-4832-9a49-a75ccdcfba1d)
-
-### 05. Business Performance Snapshot
-
-A summarized view of business performance and important analytical observations.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/11a85fcb-4da3-4c7d-b00e-70155d8121b7" alt="Business Performance Snapshot" width="700">
-</p>
-
-### 06. Random Forest Predictive Analytics
-
-Model-based business outcome estimation with regression evaluation metrics.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/96d1c95b-55b9-487f-81d7-1417bb906a33" alt="Random Forest Predictive Analytics" width="700">
-</p>
-
-### 07. Isolation Forest Anomaly Detection
-
-Identification and visualization of unusual observations using unsupervised machine learning.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/349e8866-2a57-4965-8bf9-f51998024d25" alt="Isolation Forest Anomaly Detection" width="700">
-</p>
-
-### 08. Decision Intelligence Recommendations
-
-Rule-based recommendations that translate analytical findings into practical business actions.
-
-![Decision Intelligence Recommendations](https://github.com/user-attachments/assets/48dbc407-762c-4b24-9667-33415c1be497)
-
----
 
 ## Technology Stack
 
