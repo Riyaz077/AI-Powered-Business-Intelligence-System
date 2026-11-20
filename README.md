@@ -1,12 +1,12 @@
 # AI-Powered Business Intelligence and Predictive Analytics System
 
-An interactive Flask-based business intelligence platform that transforms raw business datasets into meaningful insights through descriptive analytics, machine learning-based prediction, anomaly detection, and rule-based decision support.
+An interactive Streamlit-based business intelligence platform that transforms raw business datasets into meaningful insights through descriptive analytics, machine learning-based prediction, anomaly detection, and rule-based decision support.
 
-The system enables users to upload business data, evaluate dataset quality, explore key performance indicators, estimate business outcomes, identify unusual observations, and generate practical recommendations through a centralized web dashboard.
+The system enables users to upload business data, evaluate dataset quality, explore key performance indicators, estimate business outcomes, identify unusual observations, and generate practical recommendations through a centralized interactive dashboard.
 
 <p align="center">
 
-  **Business Analytics · Machine Learning · Predictive Intelligence · Decision Support**
+**Business Analytics · Machine Learning · Predictive Intelligence · Decision Support**
 
 </p>
 
@@ -16,7 +16,7 @@ The system enables users to upload business data, evaluate dataset quality, expl
 
 Modern businesses generate large volumes of operational data, but converting that data into actionable decisions requires effective analytical tools.
 
-This project demonstrates an integrated business intelligence workflow that combines data preprocessing, descriptive analytics, predictive modelling, anomaly detection, and recommendation generation within a Flask web application.
+This project demonstrates an integrated business intelligence workflow that combines data preprocessing, descriptive analytics, predictive modelling, anomaly detection, and recommendation generation within an interactive Streamlit web application.
 
 Users can upload their own CSV datasets or explore the included sample dataset to understand business performance and discover potentially important patterns.
 
@@ -24,23 +24,23 @@ Users can upload their own CSV datasets or explore the included sample dataset t
 
 - **Data Analysis:** Upload and explore structured business datasets.
 - **Data Quality Assessment:** Identify missing values, duplicate records, and dataset characteristics.
-- **Business Intelligence:** Generate numerical summaries, performance indicators, and interactive trend visualizations.
+- **Business Intelligence:** Generate numerical summaries, performance indicators, and analytical insights.
 - **Predictive Analytics:** Apply Random Forest Regression as a baseline predictive model.
 - **Anomaly Detection:** Use Isolation Forest to identify unusual observations.
 - **Decision Support:** Generate practical, rule-based business recommendations.
-- **Interactive Dashboard:** Access analytical results through a centralized Flask interface.
+- **Interactive Dashboard:** Explore analytical results through a centralized Streamlit interface.
 
 ---
 
 ## System Architecture
 
-The application follows a modular analytical architecture in which uploaded business data passes through preprocessing, analytics, machine learning, and recommendation components before the results are presented through the dashboard.
+The application follows a modular analytical architecture in which uploaded business data passes through preprocessing, analytics, machine learning, and recommendation components before the results are presented through the Streamlit dashboard.
 
 ### 1. Overall System Architecture
 
 ```mermaid
 flowchart TB
-    A["Business CSV Dataset"] --> B["Flask Web Application"]
+    A["Business CSV Dataset"] --> B["Streamlit Web Application"]
     B --> C["Dataset Upload and Validation"]
 
     C --> D["Data Preprocessing"]
@@ -50,7 +50,7 @@ flowchart TB
     E --> G["Predictive Analytics"]
     E --> H["Anomaly Detection"]
 
-    F --> I["Business Metrics and Trends"]
+    F --> I["Business Metrics and Insights"]
     G --> J["Random Forest Regression"]
     H --> K["Isolation Forest"]
 
@@ -61,7 +61,7 @@ flowchart TB
     L --> M["Rule-Based Recommendation Engine"]
     M --> N["Interactive Business Intelligence Dashboard"]
 
-    N --> O["Visualizations and Insights"]
+    N --> O["Analytical Results and Visualizations"]
     N --> P["Downloadable Outputs"]
 ```
 
@@ -69,20 +69,20 @@ flowchart TB
 
 | Component | Technology / Method | Purpose |
 |---|---|---|
-| Web application | Flask | Handles application routing and dashboard delivery |
+| Web application | Streamlit | Handles dashboard navigation and user interaction |
 | Data ingestion | Pandas | Reads and processes uploaded CSV files |
 | Data validation | Pandas | Examines missing values, duplicates, and column structure |
 | Descriptive analytics | Pandas, NumPy | Summarizes numerical metrics and business trends |
 | Predictive modelling | Random Forest Regressor | Establishes a baseline for numerical outcome prediction |
 | Anomaly detection | Isolation Forest | Identifies observations with unusual patterns |
 | Recommendation engine | Rule-based logic | Converts analytical findings into practical suggestions |
-| Dashboard visualization | HTML, CSS, Chart.js | Presents interactive analytical results |
+| Dashboard visualization | Streamlit | Presents analytical results and dataset information |
 
 ### 3. End-to-End Analytical Workflow
 
 ```mermaid
 flowchart TD
-    A["Start Application"] --> B["Upload Business CSV"]
+    A["Launch Streamlit Application"] --> B["Upload Business CSV"]
     B --> C["Validate Dataset"]
     C --> D["Inspect Data Structure"]
 
@@ -91,7 +91,7 @@ flowchart TD
 
     F --> G["Generate Descriptive Statistics"]
     G --> H["Calculate Business Metrics"]
-    H --> I["Visualize Trends"]
+    H --> I["Explore Analytical Results"]
 
     I --> J["Select Prediction Target"]
     J --> K["Train Random Forest Regression Baseline"]
@@ -101,8 +101,8 @@ flowchart TD
     M --> N["Identify Anomalous Observations"]
 
     N --> O["Generate Rule-Based Recommendations"]
-    O --> P["Display Results on Dashboard"]
-    P --> Q["Download Sample Dataset"]
+    O --> P["Display Results in Streamlit Dashboard"]
+    P --> Q["Download Dataset"]
 ```
 
 ---
@@ -110,13 +110,15 @@ flowchart TD
 ## Key Features
 
 ### 1. CSV Dataset Upload and Analysis
+
 - Upload custom business datasets in CSV format.
 - Read and process structured business records.
 - Automatically identify numeric columns.
-- Select a potential prediction target using common business column names.
+- Explore uploaded datasets through the dashboard.
 - Display an overview of the uploaded dataset.
 
 ### 2. Data Quality Assessment
+
 - Identify missing values across dataset columns.
 - Detect duplicate records.
 - Examine dataset dimensions and data types.
@@ -124,10 +126,11 @@ flowchart TD
 - Highlight potential issues that may affect analytical reliability.
 
 ### 3. Descriptive Business Analytics
+
 - Generate numerical summaries of business variables.
 - Explore sales and other numeric business metrics.
-- Analyze trends through interactive charts.
-- Present important analytical information through dashboard visualizations.
+- Analyze trends through descriptive analytics.
+- Present important analytical information through dashboard outputs.
 
 ### 4. Random Forest Predictive Analytics
 
@@ -148,6 +151,7 @@ The model is intended for baseline experimentation rather than production-grade 
 Isolation Forest is used to identify observations that differ significantly from the general data distribution.
 
 Potential applications include:
+
 - Unusual sales observations.
 - Unexpected changes in business metrics.
 - Uncommon transaction or operational patterns.
@@ -160,6 +164,7 @@ An anomaly indicates an unusual observation, not necessarily an error, fraud, or
 The application generates recommendations using analytical findings and predefined business rules.
 
 Examples include:
+
 - Reviewing unusual business metric variations.
 - Investigating missing or duplicate records.
 - Examining declining performance indicators.
@@ -167,23 +172,27 @@ Examples include:
 
 These recommendations are generated through predefined logic rather than a trained generative AI model.
 
-### 7. Interactive Business Intelligence Dashboard
+### 7. Interactive Streamlit Business Intelligence Dashboard
+
 - Centralized dashboard for analytical results.
-- Interactive trend visualizations.
-- Business KPI presentation.
-- Predictive model evaluation.
-- Anomaly detection results.
+- Sidebar-based application navigation.
+- Interactive CSV dataset upload.
+- Demo dataset generation and analysis.
+- Dataset overview and KPI presentation.
+- Predictive model evaluation results.
+- Anomaly detection outputs.
 - Decision-support recommendations.
+- Downloadable dataset outputs.
 
 ---
 
 ## Dashboard Screenshots
 
-The following screenshots are arranged to demonstrate the complete user journey, from the initial dashboard experience to advanced analytical outputs and decision-support recommendations.
+The following screenshots demonstrate the application interface and its analytical capabilities, from the initial dashboard experience to advanced analytical outputs and decision-support recommendations.
 
 ### 01. Dashboard Overview
 
-The main application interface, introducing the business intelligence platform and its analytical capabilities.
+The main Streamlit application interface, introducing the business intelligence platform and its analytical capabilities.
 
 ![Dashboard Overview](https://github.com/user-attachments/assets/12cb80df-b156-4092-8f4f-49d9dd880b28)
 
@@ -242,15 +251,16 @@ Rule-based recommendations that translate analytical findings into practical bus
 | Category | Technologies |
 |---|---|
 | Programming Language | Python |
-| Backend Framework | Flask |
+| Web Application Framework | Streamlit |
 | Data Processing | Pandas, NumPy |
 | Machine Learning | Scikit-learn |
 | Predictive Model | Random Forest Regression |
 | Anomaly Detection | Isolation Forest |
-| Frontend | HTML, CSS |
-| Data Visualization | Chart.js |
+| Dashboard Interface | Streamlit |
+| Data Visualization | Streamlit charts and visual components |
 | Dataset Format | CSV |
 | Development Environment | VS Code, Python Virtual Environment |
+| Cloud Deployment | Streamlit Community Cloud |
 
 ---
 
@@ -306,27 +316,24 @@ AI-Powered-Business-Intelligence-System/
 │   ├── __init__.py
 │   └── analytics.py
 │
-├── templates/
-│   └── index.html
-│
-├── static/
-│   └── style.css
-│
 └── data/
-    └── demo_business_data.csv
+    ├── demo_business_data.csv
+    └── uploads/
 ```
 
 ### Directory Description
 
 | File / Directory | Description |
 |---|---|
-| `app.py` | Main Flask application and application entry point |
+| `app.py` | Main Streamlit application and dashboard entry point |
 | `requirements.txt` | Python project dependencies |
 | `src/analytics.py` | Analytical and machine learning functionality |
-| `templates/index.html` | Dashboard interface |
-| `static/style.css` | Dashboard styling |
-| `data/` | Sample business dataset |
+| `src/__init__.py` | Python package initialization |
+| `data/` | Sample business dataset and uploaded data |
+| `data/uploads/` | Directory for uploaded CSV files |
 | `README.md` | Project documentation |
+
+The previous Flask-specific `templates/` and `static/` folders are no longer required by the Streamlit interface.
 
 ---
 
@@ -336,17 +343,21 @@ AI-Powered-Business-Intelligence-System/
 
 - Python 3.10 or newer
 - Windows, macOS, or Linux
-- Internet connection for the Chart.js CDN used by the dashboard
+- Internet connection for installing Python dependencies
 
 ### Windows Installation
 
-**Step 1: Download the repository**
+**Step 1: Clone the repository**
 
-Extract the project ZIP file and open the extracted project folder.
+```bash
+git clone https://github.com/Riyaz077/ai-powered-business-intelligence-system.git
+```
 
-**Step 2: Open Command Prompt**
+**Step 2: Navigate to the project directory**
 
-Click the File Explorer address bar, type `cmd`, and press Enter.
+```bash
+cd ai-powered-business-intelligence-system
+```
 
 **Step 3: Create a virtual environment**
 
@@ -366,10 +377,10 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-**Step 6: Run the application**
+**Step 6: Run the Streamlit application**
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
 **Step 7: Open the dashboard**
@@ -377,35 +388,45 @@ python app.py
 Navigate to:
 
 ```text
-http://127.0.0.1:5000
+http://localhost:8501
 ```
 
-The Flask application should now be accessible through your local browser.
+The Streamlit application should now be accessible through your local browser.
 
 ### macOS / Linux
 
 ```bash
+git clone https://github.com/Riyaz077/ai-powered-business-intelligence-system.git
+
+cd ai-powered-business-intelligence-system
+
 python3 -m venv .venv
+
 source .venv/bin/activate
+
 python -m pip install -r requirements.txt
-python app.py
+
+streamlit run app.py
 ```
 
-Then open `http://127.0.0.1:5000` in your browser.
+Then open `http://localhost:8501` in your browser.
 
 ---
 
 ## How to Use
 
-1. Launch the Flask application.
+1. Launch the Streamlit application.
 2. Open the dashboard in your browser.
-3. Upload a business dataset in CSV format.
-4. Review the dataset overview and data-quality information.
-5. Explore numerical summaries and business trends.
-6. Examine the Random Forest regression results.
-7. Review unusual observations identified by Isolation Forest.
-8. Analyze the rule-based business recommendations.
-9. Download the included sample dataset when needed.
+3. Navigate to the Dashboard section.
+4. Generate and analyze the included demo business dataset.
+5. Navigate to Upload Dataset to upload a custom CSV file.
+6. Select Analyze Dataset to process the uploaded data.
+7. Review the dataset overview and data-quality information.
+8. Explore the analytical results and business metrics.
+9. Examine the Random Forest regression results.
+10. Review unusual observations identified by Isolation Forest.
+11. Analyze the rule-based business recommendations.
+12. Download the available dataset outputs.
 
 ---
 
@@ -450,6 +471,7 @@ A high R² score alone does not establish that a model will generalize to future
 - Recommendations use predefined rules rather than a trained generative AI model.
 - Uploaded datasets currently use local file storage.
 - Authentication, role-based access control, and production-grade security are not implemented.
+- Streamlit Community Cloud storage is not intended for persistent user-uploaded files.
 - The application has not been presented as a production-validated enterprise BI solution.
 
 ---
@@ -472,11 +494,35 @@ A high R² score alone does not establish that a model will generalize to future
 
 ## Deployment
 
-The application can be deployed using a Python-compatible cloud hosting platform.
+The application is deployed using Streamlit Community Cloud, providing public access to the interactive business intelligence dashboard.
 
-**Live Demo:** Coming soon — deployment URL will be added after successful deployment.
+**Live Demo:** `https://intellix.streamlit.app/`
 
-For production deployment, configure environment variables, secure file handling, upload restrictions, authentication, and appropriate application-server settings. Do not expose Flask's development server directly to the public internet.
+**Deployment Platform:** Streamlit Community Cloud
+
+### Deployment Configuration
+
+| Setting | Configuration |
+|---|---|
+| Repository | `Riyaz077/ai-powered-business-intelligence-system` |
+| Branch | `main` |
+| Main File | `app.py` |
+| Framework | Streamlit |
+| Dependency File | `requirements.txt` |
+
+### Deployment Process
+
+1. Push the project source code to GitHub.
+2. Sign in to Streamlit Community Cloud using GitHub.
+3. Create or configure the application using the project repository.
+4. Select the `main` branch.
+5. Set the main file path to `app.py`.
+6. Deploy the application.
+7. Access the dashboard through its public Streamlit URL.
+
+The application runs directly through Streamlit without requiring a separate Flask server or Gunicorn process.
+
+For production-oriented use, configure appropriate file handling, authentication, privacy controls, and persistent storage.
 
 ---
 
@@ -494,4 +540,4 @@ Vellore Institute of Technology (VIT), Chennai
 
 Designed and developed as part of my technical portfolio, integrating web application development, business analytics, data processing, machine learning, and predictive decision-support techniques.
 
-**Areas Demonstrated:** Python · Flask · Business Intelligence · Machine Learning · Predictive Analytics · Anomaly Detection · Data Visualization
+**Areas Demonstrated:** Python · Streamlit · Business Intelligence · Machine Learning · Predictive Analytics · Anomaly Detection · Data Visualization
